@@ -18,6 +18,8 @@ services:
     volumes:
       - db:/var/lib/mysql
   app:
+    labels:
+      shipyard.route: '/'
     build:
       context: .
       dockerfile: ./dev/docker/Dockerfile
